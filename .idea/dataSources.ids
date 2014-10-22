@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="MySQL - maero@localhost" uuid="599a8777-d08c-4a23-b829-5b651ed02422">
+    <database-info product="MySQL" version="5.6.20" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <schema name="" catalog="maero"/>
+    <table name="BOOKS" schema="" catalog="maero" type="TABLE">
+      <column name="BOOK_ID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="TITLE" sqlType="VARCHAR" precision="300" scale="0" nullable="false" jdbcType="12"/>
+      <column name="AUTHOR" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ISBN" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="SHOP_NAME" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PRICE" sqlType="DECIMAL" precision="4" scale="2" nullable="false" jdbcType="3"/>
+      <column name="PUBLICATION" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="DATE_OF_PURCHASE" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="DETAILS" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <column name="STATUS" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="SUBJECT_ID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="GENRE_ID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="BOOK_ID"/>
+      <foreign-key name="books_ibfk_1" columns="SUBJECT_ID" ref-table="SUBJECTS" ref-schema="" ref-catalog="maero" ref-columns="SUBJECT_ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="books_ibfk_2" columns="GENRE_ID" ref-table="GENRES" ref-schema="" ref-catalog="maero" ref-columns="GENRE_ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="borrowed_books_ibfk_1" table="BORROWED_BOOKS" schema="" catalog="maero" columns="BOOK_ID"/>
+    </table>
+    <table name="BORROWED_BOOKS" schema="" catalog="maero" type="TABLE">
+      <column name="BORROWED_BOOK_ID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="FINE" sqlType="DECIMAL" precision="4" scale="2" nullable="true" jdbcType="3"/>
+      <column name="BORROWED_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="RERURNED_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="BOOK_ID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="USER_ID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="BORROWED_BOOK_ID"/>
+      <foreign-key name="borrowed_books_ibfk_1" columns="BOOK_ID" ref-table="BOOKS" ref-schema="" ref-catalog="maero" ref-columns="BOOK_ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="borrowed_books_ibfk_2" columns="USER_ID" ref-table="USERS" ref-schema="" ref-catalog="maero" ref-columns="USER_ID" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="GENRES" schema="" catalog="maero" type="TABLE">
+      <column name="GENRE_ID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="GENRE_NAME" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="GENRE_ID"/>
+      <exported-key name="books_ibfk_2" table="BOOKS" schema="" catalog="maero" columns="GENRE_ID"/>
+    </table>
+    <table name="SUBJECTS" schema="" catalog="maero" type="TABLE">
+      <column name="SUBJECT_ID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="SUBJECT_NAME" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="SUBJECT_ID"/>
+      <exported-key name="books_ibfk_1" table="BOOKS" schema="" catalog="maero" columns="SUBJECT_ID"/>
+    </table>
+    <table name="USERS" schema="" catalog="maero" type="TABLE">
+      <column name="USER_ID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="FIRST_NAME" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="LAST_NAME" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="USER_TYPE_NAME" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="EMAIL" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PASSWORD" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ADDRESS" sqlType="VARCHAR" precision="300" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PHONE_NUMBER" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TOTAL_FINE_AMOUNT" sqlType="DECIMAL" precision="4" scale="2" nullable="true" jdbcType="3"/>
+      <primary-key name="PRIMARY" columns="USER_ID"/>
+      <exported-key name="borrowed_books_ibfk_2" table="BORROWED_BOOKS" schema="" catalog="maero" columns="USER_ID"/>
+      <exported-key name="user_login_time_ibfk_1" table="USER_LOGIN_TIME" schema="" catalog="maero" columns="USER_ID"/>
+    </table>
+    <table name="USER_LOGIN_TIME" schema="" catalog="maero" type="TABLE">
+      <column name="USER_LOGIN_TIME_ID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="USER_ID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="ENTRY_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="EXIT_TIME" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="USER_LOGIN_TIME_ID"/>
+      <foreign-key name="user_login_time_ibfk_1" columns="USER_ID" ref-table="USERS" ref-schema="" ref-catalog="maero" ref-columns="USER_ID" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+  </data-source>
+</component>

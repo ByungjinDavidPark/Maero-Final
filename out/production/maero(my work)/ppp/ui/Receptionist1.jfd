@@ -1,0 +1,462 @@
+JFDML JFormDesigner: "5.2.0.0.109" Java: "1.6.0_65" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowClosed", "thisWindowClosed", true ) )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "bannerPanel"
+				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "logOutbutton"
+					"text": "LogOut"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "logOutbuttonActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 95
+					"y": 20
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "bannerLabel"
+					"text": "text"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 215
+					"y": 5
+					"width": 470
+					"height": 65
+				} )
+				add( new FormComponent( "javax.swing.JFormattedTextField" ) {
+					name: "bannerTextField"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": -5
+					"y": 0
+					"width": 95
+					"height": 70
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 713
+				"x": 80
+				"y": 10
+				"height": 75
+			} )
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "mainPanel"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) {
+					"autoSize": false
+				} ) {
+					name: "userTapPanel"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+						"columns": 3
+						"rows": 2
+						"hgap": 1
+						"vgap": 3
+					} ) {
+						name: "searchUserPanel"
+						"border": new javax.swing.border.TitledBorder( "Search User by Keyword" )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "searchUserLabel1"
+							"text": "LastName"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "searchUserTextField1"
+							"horizontalAlignment": 2
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "searchUserButton1"
+							"text": "Search"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchUserButton1ActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "searchUserLabel2"
+							"text": "Email"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "searchUserTextField2"
+							"horizontalAlignment": 2
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "searchUserButton2"
+							"text": "Search"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchUserButton2ActionPerformed", true ) )
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 30
+						"y": 15
+						"width": 780
+						"height": 130
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+						"columns": 4
+						"rows": 6
+					} ) {
+						name: "userEntryPanel"
+						"border": new javax.swing.border.TitledBorder( "Entry" )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "userEntryfName"
+							"text": "FirstName"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "userEntryfNameText"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "userEntrylname"
+							"text": "LasrName"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "userEntrylNameText"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "userEntryPwd"
+							"text": "Password"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JPasswordField" ) {
+							name: "passwordField1"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "userEntryPhone"
+							"text": "PhoneNumber"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "userEntryPhoneText"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "userEntryEmai"
+							"text": "Email"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "userEntryEmailText"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "userEntryAdress"
+							"text": "Adress"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "userEntryAdressText"
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 30
+						"y": 160
+						"width": 785
+						"height": 265
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+						name: "navigationUserPanel"
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "previousUserButton"
+							"text": "Previous"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "previousUserButtonActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "currentUserIndex"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "currentUserIndexActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "ofLabelUser"
+							"text": "of"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "maxIndexUser"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "nextUserbutton"
+							"text": "Next"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "nextUserbuttonActionPerformed", true ) )
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 205
+						"y": 425
+						"width": 415
+						"height": 50
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "addUserButton"
+						"text": "Add User"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addUserButtonActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 355
+						"y": 475
+						"width": 140
+						"height": 30
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "User Management"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "bookTapPane"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+						"columns": 3
+						"rows": 2
+					} ) {
+						name: "searchBookPanel"
+						"border": new javax.swing.border.CompoundBorder( new javax.swing.border.TitledBorder( "Search Book by Keyword" ), sfield com.jgoodies.forms.factories.Borders DLU2_BORDER )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "searchTitle"
+							"text": "Title"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "searchTitleField"
+							"maximumSize": new java.awt.Dimension( 120, 50 )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "searchTitleButton"
+							"text": "Search"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchTitleButtonActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "searchAuthor"
+							"text": "Author"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "searchAuthorField"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "searchAuthorButton"
+							"text": "Search"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchAuthorButtonActionPerformed", true ) )
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 40
+						"y": 15
+						"width": 765
+						"height": 140
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+						"columns": 4
+						"rows": 4
+						"hgap": 2
+						"vgap": 3
+					} ) {
+						name: "bookEntryPanel"
+						"border": new javax.swing.border.CompoundBorder( new javax.swing.border.TitledBorder( "Entry" ), sfield com.jgoodies.forms.factories.Borders DLU2_BORDER )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "bookEntryTitle"
+							"text": "Title"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "bookEntryTitleText"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "bookEntryAuthoer"
+							"text": "Author"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "bookEntryAuthorText"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "bookEntryISBN"
+							"text": "ISBN"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "bookEntryISBNText"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "bookEntryPublic"
+							"text": "Publication"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "bookEntryPublicText"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "bookEntrySubject"
+							"text": "Subject"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "bookEntrySubjectCom"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "bookEntryGenre"
+							"text": "Genre"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "bookEntryGenreCom"
+							"model": new javax.swing.DefaultComboBoxModel {
+								selectedItem: "Fiction"
+								addElement( "Fiction" )
+								addElement( "Non-Fiction" )
+							}
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "bookEntryDetail"
+							"text": "Detail"
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "bookEntryDetailText"
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 40
+						"y": 165
+						"width": 770
+						"height": 270
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+						name: "navigationBookPane"
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "previousBookButton"
+							"text": "Previous"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "previousBookButtonActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "currentBookIndex"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "currentBookIndexActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "bookOflabel"
+							"text": "of"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "maxIndexBook"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "nextBookButton"
+							"text": "Next"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "nextBookButtonActionPerformed", true ) )
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 270
+						"y": 435
+						"width": 325
+						"height": 40
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "addBookButton"
+						"text": "Add Book"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addBookButtonActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 360
+						"y": 480
+						"width": 150
+						"height": 30
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Book Management"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "0:1.0"
+					"$rowSpecs": "0:1.0"
+					"$alignTop": true
+					"$alignLeft": true
+					"$hGap": 3
+				} ) {
+					name: "rePortPanel"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+						name: "reportPanel"
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "bookLendingLabel"
+							"text": "Book Lending Report"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+							"x": 170
+							"y": 190
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "fineReportLabel"
+							"text": "Fine Report"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+							"x": 170
+							"y": 240
+							"width": 150
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "lendingCombo"
+							"model": new javax.swing.DefaultComboBoxModel {
+								selectedItem: "Daily"
+								addElement( "Daily" )
+								addElement( "Monthly" )
+								addElement( "Annually" )
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+							"x": 330
+							"y": 185
+							"width": 125
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "findCombo"
+							"model": new javax.swing.DefaultComboBoxModel {
+								selectedItem: "Book lost"
+								addElement( "Book lost" )
+								addElement( "Late return" )
+								addElement( "User Fine" )
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+							"x": 330
+							"y": 235
+							"width": 125
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "generateLendingButton"
+							"text": "Generate Report"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "generateLendingButtonActionPerformed", true ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+							"x": 480
+							"y": 180
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "generateFineButton"
+							"text": "Generate Report"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "generateFineButtonActionPerformed", true ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+							"x": 480
+							"y": 230
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "bookPurchasedLabel"
+							"text": "Book Purchased Report"
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+							"x": 170
+							"y": 290
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "bookPurchasedCom"
+							"model": new javax.swing.DefaultComboBoxModel {
+								selectedItem: "By Shop"
+								addElement( "By Shop" )
+								addElement( "By Price" )
+								addElement( "By Year(2014)" )
+								addElement( "By Year(2013)" )
+							}
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+							"x": 330
+							"y": 285
+							"width": 125
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "generatePurchaseButton"
+							"text": "Generate Report"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "generatePurchaseButtonActionPerformed", true ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+							"x": 480
+							"y": 280
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Report Generation"
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 35
+				"y": 95
+				"width": 850
+				"height": 550
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 920, 695 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}
